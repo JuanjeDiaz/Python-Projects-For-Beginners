@@ -8,29 +8,23 @@ while True:
 	Number=randint(0,20)
 	while True: 
 		try: guess=int(input("\nIn which number I'm thinking about?: "))
-		except ValueError: 
-			print("Sorry, enter a valid number.") 
-			continue
+		except ValueError: print("Sorry, enter a valid number.") 
 		else: break
 	while(Number!=guess):
 		if(guess<Number): 
 			while True: 
 				try: guess=int(input("Too low! Try again: "))
-				except ValueError: 
-					print("Sorry, enter a valid number.") 
-					continue
+				except ValueError: print("Sorry, enter a valid number.") 
 				else: break
 		else: 
 			while True: 
 				try: guess=int(input("Too high! Try again: "))
-				except ValueError: 
-					print("Sorry, enter a valid number.") 
-					continue
+				except ValueError: print("Sorry, enter a valid number.") 
 				else: break
 	replay=0
 	while(replay!='Y' and replay!='N'):
 		replay=input("\nYou got it!! The number was "+ str(Number) +". Do you want to try again? (y/n): ").upper()
-	if(replay=='n'):
+	if(replay=='N'):
 		break
 	
 print("\n\n 						GAME OVER")
