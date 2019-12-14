@@ -11,8 +11,8 @@ while True:
 		if(guess<Number): guess=int(input("Too low! Try again: "))
 		else: guess=int(input("Too high! Try again: "))
 	replay=0
-	while(replay!='y' and replay!='n'):
-		replay=input("\nYou got it!! The number was "+ str(Number) +". Do you want to try again? (y/n): ")
+	while(replay!='Y' and replay!='N'):
+		replay=input("\nYou got it!! The number was "+ str(Number) +". Do you want to try again? (y/n): ").upper()
 	if(replay=='n'):
 		break
 	
